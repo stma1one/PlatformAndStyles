@@ -154,7 +154,7 @@ namespace MVVMSample.ViewModels
         #region Constructor
         public ViewToysPageViewModel(IToys service)
         {
-
+            //Notify when device goes off internet or back on
             Connectivity.ConnectivityChanged +=(async(s,e)=>await NotifyWhenInternetIsLost(s,e));
             #region Init Data
             Price = null;
